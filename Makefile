@@ -1,5 +1,5 @@
 # List of all programs (that we want compiled).
-PROGRAMS = start_thread use_lock condition_variable
+PROGRAMS = start_thread use_lock condition_variable condition_variable_any
 
 CXXFLAGS=-g -pthread
 LIBS=-lpthread
