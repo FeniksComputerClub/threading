@@ -9,7 +9,7 @@ struct A {
   // that is accessed simulateously by two threads.
   // Then we need to protect that variable using a mutex, say this one:
   std::mutex m_count_mutex;
-// Because, when we don't use locking, then things go wrong.
+  // Because, when we don't use locking, then things go wrong.
 };
 
 // For convenience, lets instantiate an object of type A globally,
@@ -19,7 +19,7 @@ A a;
 // Consider this thread that accesses m_count without locking!
 void thr_no_lock()
 {
-  // Loop 100000 times, each time reading m_count
+  // Loop 100000 times, each loop incrementing m_count by one.
   for (int i = 0; i < 100000; ++i)
   {
     // Read m_count.
