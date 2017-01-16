@@ -2,6 +2,7 @@
 PROGRAMS = start_thread use_lock condition_variable condition_variable_any
 
 CXXFLAGS=-g -pthread
+LDFLAGS=-pthread
 LIBS=-lpthread
 
 # The default target to make:
@@ -11,7 +12,7 @@ all: $(PROGRAMS)
 .SUFFIXES: .cxx .o .h	# Define our suffix list
 
 %: %.o
-	g++ $^ -o $@ $(LIBS)
+	g++ $(LDFLAGS) $^ -o $@ $(LIBS)
 
 %.o: %.cxx
 	g++ -std=c++11 $(CXXFLAGS) -c -o $@ $<
