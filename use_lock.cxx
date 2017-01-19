@@ -20,7 +20,7 @@ A a;
 void thr_no_lock()
 {
   // Loop 100000 times, each loop incrementing m_count by one.
-  for (int i = 0; i < 100000; ++i)
+  for (int i = 0; i < 1000000; ++i)
   {
     // Read m_count.
     int read = a.m_count;
@@ -34,7 +34,7 @@ void thr_no_lock()
 // Also have a thread that does the same but with locking:
 void thr_with_lock()
 {
-  for (int i = 0; i < 100000; ++i)
+  for (int i = 0; i < 1000000; ++i)
   {
     std::unique_lock<std::mutex> lk(a.m_count_mutex);
     int read = a.m_count;
