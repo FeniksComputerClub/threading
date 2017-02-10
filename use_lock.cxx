@@ -55,7 +55,7 @@ int main()
     t2.join();
   }
 
-  // This result will be LESS THAN 200000!
+  // This result will probably be LESS THAN 200000!
   std::cout << "Afterwards the value of m_count, without locking, is: " << a.m_count << std::endl;
 
   // And again, but now both threads use locking.

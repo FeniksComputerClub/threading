@@ -3,7 +3,7 @@ PROGRAMS = start_thread use_lock condition_variable condition_variable_any
 
 CXXFLAGS=-g -pthread
 LDFLAGS=-pthread
-LIBS=-lpthread
+LIBS=
 
 # The default target to make:
 all: $(PROGRAMS)
