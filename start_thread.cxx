@@ -34,7 +34,7 @@ int main()
   std::cout << "Entering main()" << std::endl;
 
   std::thread t1;       // Not associated with any thread.
-  start_t1(t1);         // t1 is swapped with another (newly created) thread.
+  start(t1);            // t1 is swapped with another (newly created) thread.
 
   std::cout << "Sleeping for 10 seconds..." << std::endl;
   std::this_thread::sleep_for(std::chrono::seconds(10));
